@@ -413,3 +413,210 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================
+   ADVANCED RESPONSIVE ENHANCEMENTS
+   ========================================== */
+
+/* Extra Small Devices (320px - 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+  }
+
+  .container-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card-hover:hover {
+    transform: none;
+  }
+
+  .glass,
+  .glass-dark {
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Small Devices (481px - 640px) */
+@media (min-width: 481px) and (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container-mobile {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+
+  .container-mobile {
+    max-width: 1400px;
+  }
+}
+
+/* Ultra Wide Screens */
+@media (min-width: 1920px) {
+  .container-mobile {
+    max-width: 1600px;
+  }
+}
+
+/* Responsive Images */
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent Layout Breaking */
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Responsive Tables */
+table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Better Mobile Inputs */
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+}
+
+/* Mobile Friendly Text */
+.responsive-text {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.responsive-heading {
+  font-size: clamp(1.75rem, 5vw, 4rem);
+}
+
+/* Responsive Grid Utility */
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(280px, 100%), 1fr)
+  );
+  gap: 1.5rem;
+}
+
+/* Responsive Flex Utility */
+.flex-responsive {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .flex-responsive {
+    flex-direction: column;
+  }
+}
+
+/* Better Mobile Scroll Performance */
+.scroll-smooth-mobile {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Landscape Phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .safe-top {
+    padding-top: 0.5rem;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+  .card-hover:hover {
+    transform: none;
+    box-shadow: inherit;
+  }
+
+  button,
+  a,
+  [role="button"] {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+/* Better Responsive Modals */
+.responsive-modal {
+  width: min(95vw, 700px);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Responsive Section Padding */
+.section-padding {
+  padding-top: clamp(3rem, 8vw, 8rem);
+  padding-bottom: clamp(3rem, 8vw, 8rem);
+}
+
+/* Prevent Horizontal Scroll */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive Cards */
+.responsive-card {
+  padding: clamp(1rem, 3vw, 2rem);
+  border-radius: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+/* Better Mobile Navigation */
+.mobile-nav-spacing {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* iPhone Notch Support */
+@supports (padding: max(0px)) {
+  .safe-container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
